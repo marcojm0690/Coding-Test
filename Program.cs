@@ -52,7 +52,7 @@ namespace Coding_Test
                     {
                         if (promo.Id != recipient.Recipients[i].Id)
                         {
-                            // With this I get the count of elements that are equal in two lists.
+                            //get the count of elements that are equal in two lists.
                             int count = promo.Tags!.Intersect(recipient.Recipients[i].Tags!).Count();
                             if (count >= 2)
                             {
