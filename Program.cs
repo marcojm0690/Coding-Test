@@ -10,10 +10,10 @@ namespace Coding_Test
 {
     /// <summary>
     /// Acceptance Criteria
-    //The output should be printed to the console.
-    //Each pair of names should only appear once in the list, the order does not matter.
-    //The json can be included as string or object in the file or loaded externally.
-    //You may assume all tags are lowercase and are distinct per user (promo may only appear once in a list)
+    //[X] The output should be printed to the console. 
+    //[X] Each pair of names should only appear once in the list, the order does not matter.
+    //[X] The json can be included as string or object in the file or loaded externally.
+    //[X] You may assume all tags are lowercase and are distinct per user (promo may only appear once in a list)
     /// </summary>
     internal class Program
     {
@@ -25,7 +25,7 @@ namespace Coding_Test
                 Recipient? recipient = Recipient.LoadJson();
 
                 List<string> names = GetRecipients(recipient).ToList();
-
+                // Print the names that are not duplicated
                 Console.WriteLine(String.Join("|", names.Distinct()));
             }
             catch (Exception ex)
