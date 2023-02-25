@@ -27,13 +27,14 @@ namespace Coding_Test
                 List<string> names = GetRecipients(recipient).ToList();
                 // Print the names that are not duplicated
                 Console.WriteLine(String.Join("|", names.Distinct()));
+                Console.ReadKey();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
 
-            Console.ReadKey();
+           
         }
         /// <summary>
         /// Get the recipients
@@ -63,7 +64,7 @@ namespace Coding_Test
                                         recipient.Recipients[i].Name!
                                     }.OrderBy(c => c).ToList();
 
-                                yield return String.Join(" ", temp);
+                                yield return String.Join(", ", temp);
 
                             }
                         }
